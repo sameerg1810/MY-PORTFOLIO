@@ -1,0 +1,271 @@
+#work-content {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+#hrline {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+#images {
+    font-size: xx-small;
+}
+
+#footImage {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+#footButton {
+    background-color: #4f4f4f;
+    height: 5rem;
+    border-radius: 50px;
+}
+
+#footImage:hover {
+    text-shadow: #00e5ff;
+    color: aqua;
+    z-index: 2;
+    scale: 120%;
+
+}
+
+#hrlines {
+    color: black;
+}
+
+
+.contents {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.5s ease-in-out;
+}
+
+.contents.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* this is  properties for "scroll down to see more" */
+#scroll-prompt {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+    margin-right: 1rem auto;
+    z-index: 2;
+}
+
+
+#scroll-prompt {
+    animation: bounce 2s ease-in-out infinite alternate;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+@media only screen and (min-width: 768px) {
+    #scroll-prompt {
+        /* styles for screens larger than 768px */
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    #scroll-prompt {
+        /* styles for screens smaller than 768px */
+    }
+}
+
+
+
+/*this is google map popup screen)*/
+#popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 999;
+    /* This will bring the popup to front */
+}
+
+
+#popup {
+    animation: fadeOut .5s;
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+.center-icon {
+    text-decoration: solid;
+
+    padding: 1rem;
+}
+
+
+#close-popup {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    line-height: 1;
+    text-align: center;
+    vertical-align: middle;
+    width: 1.8rem;
+    height: 1.8rem;
+    background-color: red;
+    font-size: larger;
+    font-family: "Bold";
+}
+
+.fa-youtube {
+    color: red !important;
+    border-color: #fff;
+
+    border-radius: 2px;
+}
+
+#mail a {
+    color: blue;
+    text-decoration: underline;
+}
+
+#connect {
+    font-size: small;
+    color: rgb(0, 61, 41)
+}
+
+#connect:hover {
+    border: #000;
+    background-color: rgb(0, 255, 0);
+    color: rgb(0, 98, 16);
+    transition: 1ms;
+}
+
+.fa-phone {
+    color: green;
+}
+
+
+.fa-whatsapp {
+    font-size: large;
+    color: rgb(167, 255, 167);
+}
+
+.auto-type {
+    font-size: medium;
+}
+
+.modal-content {
+    max-height: 80%;
+    overflow-y: auto;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: rgb(255, 0, 0);
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#popup-Certificates {
+    position: fixed;
+    top: 10%;
+    left: 25%;
+    max-height: 60rem;
+    display: none;
+    border-radius: 10px;
+    z-index: 10;
+}
+
+
+#popup-close-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+}
+
+#CertificatesBody {
+    max-height: 600px;
+    overflow-y: scroll;
+}
+
+
+#CertificatesBody img {
+    width: 30rem;
+    height: 30rem;
+}
+
+#rotated {
+    transform: rotate(90deg);
+}
+
+.particle-js {}
+
+#webcoderskull {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    padding: 0 20px;
+    width: 100%;
+    text-align: center;
+    z-index: -10;
+}
+
+canvas {
+    height: 50rem;
+    width: 100%;
+    z-index: -10;
+}
+
+#webcoderskull h1 {
+    letter-spacing: 5px;
+    font-size: 5rem;
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    z-index: -10;
+}
+
+#particles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}

@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chroma">
+    <meta name="viewport" content="width=device-width,initial scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="style.css">
+    <title>BSC-1</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+
+    <script src="https://kit.fontawesome.com/0cba31394f.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/0cba31394f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/quartz/bootstrap.min.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=API_KEY"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script type="text/javascript" src="js/particles.min.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/app.js" crossorigin="anonymous"></script>
+
+
+
+
+</head>
+
+<body>
+    <!-- Modal -->
+
+    <div class="card border-secondary mb-3 w-75 p-0" id="popup" style="display: none;">
+        <div class="card-header p-1 m-1 d-flex justify-content-start" id="popup-content">
+            <button class="center-icon justify-content-center col-4 p-1 mt-1 mb-0 text-black-150 rounded-1 m-sm-1"
+                id="close-popup"><i class="fa-solid fa-circle-xmark"></i></button>
+            <div class=" card-title fs-1 text-dark-emphasis display-4">My Location</div>
+        </div>
+        <!-- Add the content for the pop-up window here -->
+        <div class="card-body mt-0 m-1 p-0">
+            <h4 class="card-title mt-0 m-sm-0 text-dark">I'm here</h4>
+            <div class="card text-white bg-success-subtle mb-1 m-1 m-sm-0 text-center row p-1 d-flex justify-content-center"
+                id="map">
+                <iframe class="col-12 m-sm-0"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15304.473915087687!2d80.71448902679424!3d16.469537395531827!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a35fc7f95984d1f%3A0x1a3fa93674cbd4c6!2sTaraka%20Rama%20Nagar%2C%20Penamaluru%2C%20Andhra%20Pradesh%20521137!5e0!3m2!1sen!2sin!4v1673722493253!5m2!1sen!2sin"
+                    width="700" height="400" style="border:0; margin:1rem;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- //main container -->
+    <div class="container" id="content-scroll">
+        <div id="particles">
+            <div id="webcoderskull">
+            </div>
+        </div>
+        <!-- navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary rounded-bottom-1">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Portfolio</a>
+
+                <div class="d-flex justify-content-end">
+                    <div class="collapse navbar-collapse " id="navbarColor01">
+
+                        <form class="d-flex">
+                            <ul class="navbar-nav me-sm-2">
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="#skills-content">Skills</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page"
+                                        href="#education-content">Education</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="#work-content">Projects</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
+                                        aria-haspopup="true" aria-expanded="false">MORE</a>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="#" id="popup-link">My Certificates <i
+                                                class="fa-solid fa-certificate"></i></a>
+                                        <a class="dropdown-item" href="https://www.youtube.com/@sameergorrepati9275">My
+                                            channel <i class="fa-brands fa-youtube"></i></a>
+                                        <a class="dropdown-item" id="mail"
+                                            href="mailto:sameerg1810@gmail.com?subject=Contact%20Request&body=Hello%20there">Gmail
+                                            <i class="fa-solid fa-envelope"></i></a>
+                                        <!-- Location with GMAP -->
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="#" id="open-popup">My location <i
+                                                class="fa-solid fa-location-dot"></i></a>
+                                    </div>
+                                </li>
+                            </ul>
+                            <!-- <input class="form-control me-sm-2" type="search" placeholder="Search">
+                        <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button> -->
+                        </form>
+                    </div>
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01"
+                    aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </nav>
+        <!-- navbar end -->
+
+
+
+        <!-- certificates window start -->
+        <div class="Certificates card  container-fluid mt-2 p-lg-1 w-50 m-autoshadow" id="popup-Certificates">
+            <div class="card-header w-100 sticky-top p-0 m-0 border-0">
+                <div class="card-header mx-auto mb-lg-1 m-sm-1  p-lg-0 p-sm-0  sticky-top rounded-1">
+                    <div class=" card-title fs-1 text-dark-emphasis display-4">Certificates</div>
+                    <button class="close-button btn-primary border-opacity-10 shadow m-lg-1 p-lg-1"
+                        id="popup-close-button" onclick="closeCertificates()"><i
+                            class="fa-solid fa-circle-xmark"></i></button>
+                </div>
+            </div>
+            <!-- Add 20 h1 tags -->
+            <!-- Add 20 image tags -->
+
+            <div class="card-body bg-primary-subtle m-lg-1 rounded-2 mt-1 " id="CertificatesBody">
+                <div class=" container card-text mx-auto text-center text-danger bg-transparent p-0">
+                    <h5>SSC</h5>
+                    <img src="./images/SSC.pdf_1.jpg" alt="Image 1" class="img-fluid mx-auto m-sm-0">
+                    <h5>Intermediate Board</h5>
+                    <img src="./images/INTERMEDIATE_page-0001.jpg" alt="Image 2" class="img-fluid mx-auto m-sm-0">
+                    <h5>B.tech CMM</h5>
+                    <img src="./images/BTECHCMM_page-0001.jpg" alt="Image 3" class="img-fluid mx-auto m-sm-0">
+                    <h5>DEGREE CERTIFICATE</h5>
+                    <img src="./images/JNTUK_page-0001.jpg" alt="Image 1" class="img-fluid mx-auto m-sm-0 ">
+                    <h5>ADVANCE-DIPLOMA<br>in VFX-ANIMATION</h5>
+                    <img src="./images/Annapurna_page-0001.jpg" alt="Image 2" class="img-fluid mx-auto m-sm-0"
+                        style="transform:rotate(-90deg)">
+                    <h5>VIDAL NDT-1</h5>
+                    <img src="./images/VIDALNDT-1_page-0001.jpg" alt="Image 2" class="img-fluid mx-auto m-sm-0"
+                        id="rotated">
+                    <h5>VIDAL NDT-2</h5>
+                    <img src="./images/VIDALNDT-2.pdf_1.jpg" alt="Image 3" class="img-fluid mx-auto m-sm-0"
+                        id="rotated">
+                    <h5>VIDAL NDT-3</h5>
+                    <img src="./images/VIDALNDT-3.pdf_1.jpg" alt="Image 1" class="img-fluid mx-auto m-sm-0"
+                        id="rotated">
+                    <h5>VIDAL NDT-4</h5>
+                    <img src="./images/VIDALNDT-4.pdf_1.jpg" alt="Image 2" class="img-fluid mx-auto m-sm-0"
+                        id="rotated">
+                    <h5>C and JAVA</h5>
+                    <img src="./images/CandJava_page-0001.jpg" alt="Image 3" class="img-fluid mx-auto m-sm-0">
+                    <h5>PYTHON</h5>
+                    <img src="./images/PYTHON_page-0001.jpg" alt="Image 3" class="img-fluid mx-auto m-sm-0"
+                        id="rotated">
+                    <h5>DIVI's LABARATORIES<br>GMail</h5>
+                    <img src="./images/LOTGMAIL_page-0001.jpg" alt="Image 3" class="img-fluid mx-auto m-sm-0">
+                    <h2>DIVI's LABARATORIES<br>Letter of Training</h2>
+                    <img src="./images/LOT_page-0001.jpg" alt="Image 3" class="img-fluid mx-auto m-sm-0">
+                    <h5>DIVI's LABARATORIES<br>EPF</h5>
+                    <img src="./images/EPF_page-0001.jpg" alt="Image 3" class="img-fluid mx-auto m-sm-0">
+                    <h5>DIVI's LABARATORIES<br>Resignation Letter</h5>
+                    <img src="./images/Resignation.pdf_1.jpg" alt="Image 3" class="img-fluid mx-auto m-sm-0">
+                    <h5>DIVI's LABARATORIES<br>Letter of Releaving</h5>
+                    <img src="./images/RELEAVING_page-0001.jpg" alt="Image 3" class="img-fluid mx-auto m-sm-0">
+                    <h5>Reliance Id-card</h5>
+                    <img src="./images/RELIANCEID_CARD_page-0001.jpg" alt="Image 3" class="img-fluid mx-auto m-sm-0">
+                    <h5>Unity Certificate</h5>
+                    <img src="./images/COREGLOBAl_page-0001.jpg" alt="Image 1" class="img-fluid mx-auto m-sm-0"
+                        id="rotated">
+                    <h5>INNOMATICS Certificate</h5>
+                    <img src="image1.jpg" alt="Image 1">
+                </div>
+            </div>
+        </div>
+
+
+        <!-- portfolio card with Introduction -->
+        <div class="card  m-3 border-0">
+
+            <div class="card-body text-center mb-0">
+                <img src="./images/Boy.png" style="width:5rem;height:5rem;" class="card-img rounded-circle" alt="...">
+                <h5 class="card-title text-lg-center">Hi,I'm Sameer<br><span class="auto-type text-dark"></span>
+                </h5>
+
+
+                <p class="card-text text-lg-center">Building digital products,brands,and experience.</p>
+
+
+                <a href="tel:+919490856692" class="btn btn-primary rounded-pill text-bg-info p-0 m-2 border-0 "><button
+                        type="button" id="connect"
+                        class="rounded-pill text-bg-info btn-lg p-lg-2 mb-0 text-black border-0 shadow-sm">CONNECT
+                        WITH
+                        ME <i class="fa-solid fa-phone"></i></button></a>
+            </div>
+
+
+            <!-- Bounce Animation for SCroll down for more -->
+            <div class="text-center d-flex justify-content-center mt-0 jello rounded-1 bg-danger d-flex align-items-center"
+                id="scroll-prompt">
+                Scroll down
+                to view
+                more
+            </div>
+
+
+            <!-- white card that ABOUT ME -->
+            <div class="d-flex justify-content-center contents m-sm-0 m-lg-1" id="portfolio-content">
+                <div class="card w-75  m-1 align-self-start border-0  m-sm-0" style="background-color:#d8f2f1;">
+                    <div class="card-body row">
+                        <div class="col col-sm-12 text-dark">
+                            <h6>HELLO</h6>
+                            <h5 class="card-title">Full Stack Web-Developer</h5>
+                            <p class="card-text text-break">An independent and self-motivated graduate
+                                with proven and
+                                tested negotiation in a Private Company for 1 year -9 months and now
+                                working as a
+                                Freelancer UI designer. I am mastering HTML, and CSS and know how to
+                                Program a browser
+                                (like using JavaScript, React.js, and Three.js) and Program a server
+                                (like using PHP,
+                                MongoDB, and Python).</p>
+                            <a href="#"><button type="button" class="btn btn-warning m-1">Hire
+                                    me</button></a>
+                            <a href="https://drive.google.com/file/d/1KHz_znqMquKCqW2zuDMczvx9eL3vzRZA/view?usp=sharing"
+                                download="Sameer Resume"><button type="button"
+                                    class="btn btn-outline-primary m-1">Resume</button></a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- these are SKills -->
+        <div class="d-flex justify-content-center bg-transparent contents m-sm-0 " id="skills-content">
+            <div
+                class="card m-lg-3  border-0 h-20 d-flex  justify-content-between flex-col rounded-1 w-100 bg-transparent">
+                <div class="p-1 fs-1 m-1 text-dark">SKILLS</div>
+                <div class="m-lg-1 m-sm-0 border-0 h-20 d-flex   flex-col rounded-0 align-bottom">
+                    <div class="card  h-3 mt-4 m-lg-2  d-lg-inline flex-column  bd-highlight shadow mb-2 m-sm-0 ">
+
+                        <p class="fs-3 margin-left-10 p-1 text-dark mb-1">Languages and Databases</p>
+                        <hr>
+                        <div class="row d-flex justify-content-evenly p-2 m-lg-1 "> <img src="./images/pngwing.com.png"
+                                class="col col-sm-2 img-fluid m-0 p-1" alt="..." id="skillsImg">
+                            <img src="./images/pngwing.com (1).png" class="col col-sm-2 img-fluid m-0 p-1" alt="..."
+                                id="skillsImg">
+                            <img src="./images/pngwing.com (6).png" class="col col-sm-2 img-fluid m-0 p-1" alt="..."
+                                id="skillsImg">
+                            <img src="./images/bootstrap.png" class="col col-sm-2 img-fluid m-0 p-1" alt="..."
+                                id="skillsImg">
+                            <img src="./images/react.png" class="col col-sm-2 img-fluid m-0 p-1" alt="..."
+                                id="skillsImg">
+                            <img src="./images/icons8-python-480.png" class="col col-sm-2 img-fluid m-0 p-1" alt="..."
+                                id="skillsImg">
+                            <hr class="border-1 opacity-100 text-center w-100  text-dark" id="hrlines">
+                            <img src="./images/icons8-node-js-100.png" class="col col-sm-2 img-fluid m-0 p-1" alt="..."
+                                id="skillsImg">
+                            <img src="./images/mongodb.png" class="col col-sm-2 img-fluid m-0 p-1" alt="..."
+                                id="skillsImg">
+                            <img src="./images/icons8-php-logo-500.png" class="col col-sm-2 img-fluid m-0 p-1" alt="..."
+                                id="skillsImg">
+                            <img src="./images/pngwing.com (3).png" class="col col-sm-2 img-fluid m-0 p-1" alt="..."
+                                id="skillsImg">
+                            <img src="./images/maya.png" class="col col-sm-2 img-fluid m-0 p-1" alt="..."
+                                id="skillsImg">
+                            <img src="./images/blender.png" class="col col-sm-2 img-fluid m-0 p-1" alt="..."
+                                id="skillsImg">
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+
+        <!-- EDUCATION -->
+        <div class="d-flex justify-content-center contents" id="education-content">
+            <div
+                class="card m-2 m-sm-0 m-lg-3 mt-2 mb-12 border-0 rounded-1  d-flex  justify-content-evenly flex-col   text-black border-0 w-100 h-75 p-10">
+                <p class="fs-1 m-1  text-dark-emphasis ">EDUCATION</p>
+
+
+                <div
+                    class="row card w-4 mb-3 m-2 p-10 mt-2 d-flex   justify-content-evenly flex-row bd-highlight  bg-dark-subtle border-0 text-center">
+                    <div class="col col-sm-3 m-sm-0 mt-lg-3 mt-sm-1 mt-3 mb-1"><i class="fa-solid fa-laptop-file"
+                            style="font-size: 44px;" id="images"></i>
+                        <h6>ADVANCE-DIPLOMA(VFX-3D ANIMATION)</h6>
+                        <p class="fs-6 m-1 p-1">ANNAPURNA COLLEGE OF FILM AND MEDIA, HYDERABAD</p>
+                        <p class="fs-6 m-1 p-1">01/2019-01/2020</p>
+                    </div>
+                    <div class="col col-sm-3 m-sm-0 mt-lg-3 mt-sm-1 mt-3 mb-1"><i class="fa-solid fa-graduation-cap"
+                            style="font-size: 44px;" id="images"></i>
+                        <h6>B.Tech:MECHANICAL ENGINEERING</h6>
+                        <p class="fs-6 m-1 p-2">PRASAD.V.POTLURI SIDDHARTHA INSTITUTE OF
+                            TECHNOLOGY(JNTUK affiliated),
+                            VIJAYAWADA.</p>
+                        <p class="fs-6 m-1 p-1">MECHANICAL ENGINEERING(6.74 GPA)</p>
+                        <p class="fs-6 m-1 p-1">04/2014-04/2018</p>
+                    </div>
+
+                    <div class="col col-sm-3 m-sm-0 mt-lg-3 mt-sm-1 mt-3 mb-1"><i class="fa-solid fa-building-columns"
+                            style="font-size: 44px;" id="images"></i>
+                        <h6>Intermediate:MPC</h6>
+                        <p class="fs-6 m-1 p-1">NARAYANA JUNIOR COLLEGE, VIJAYAWADA</p>
+                        <p class="fs-6 m-1 p-1">M.P.C (84.2%)</p>
+                        <p class="fs-6 m-1 p-1">03/2012-03/2014</p>
+                    </div>
+                    <div class="col col-sm-3 m-sm-0 mt-lg-3 mt-sm-1 mt-3 mb-1"><i class="fa-solid fa-school"
+                            style="font-size: 44px;" id="images"></i>
+                        <h6>SSC</h6>
+                        <p class="fs-6 m-1 p-1">SRI KRISHNAVENI RESIDENTIAL TALENT SCHOOL, VIJAYAWADA.
+                        </p>
+                        <p class="fs-6 m-1 p-1">S.S.C (9.3 GPA)</p>
+                        <p class="fs-6 m-1 p-1">04/2011-04/2012</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- paragraph PROJECTS AND EXPERIENCE -->
+        <div class=" card d-flex justify-content-start w-75 p-1 contents rounded-1 bg-transparent m-sm-0 m-lg-3"
+            id="work-content">
+            <div class="d-flex flex-column  p-1 justify-content-evenly m-sm-0 m-lg-1 border-danger border-1"
+                id="Projects">
+                <hr class="border border-danger border-2 opacity-50 w-100">
+                <div class="bg-primary-subtle text-dark-emphasis text-danger mb-3 rounded-1 p-1">
+                    <p class="fs-3  rounded-1 p-1">WORK EXPERIENCE</p>
+                    <p class="fs-4 text-dark-emphasis">MECHANIZATION ENGINEER(Supervisor)</p>
+                    <p class="fs-7 text-dark">DIVI'S LABORATORIES.PVT.LTD</p>
+                    <p class="fs-7 text-dark">04-2020 to 03/2022</p>
+                    <p class="fs-7 text-dark">Installation of Powder Transferring Systems,JIB cranes and
+                        Monorails.</p>
+                </div>
+                <div class="bg-info-subtle text-black rounded-3 p-2">
+                    <p class="fs-3 text-danger">Projects</p>
+                    <p class="fs-5">YouTube Clone website</p>
+                    <p class="fs-6">This website was made with HTML-5, CSS-3 and JavaScript. Initially,
+                        it is not
+                        responsive , I used Bootstrap framework to made it responsive.</p>
+                    <h6><span class="badge bg-secondary bg-danger">Javascript</span></h6>
+                    <h6><span class="badge bg-secondary bg-danger">HTML/CSS</span></h6>
+                    <p class="fs-7">Implemented three LPN algorithm using C++ and give one improvement
+                        in terms of
+                        memory
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+    </div>
+
+
+
+    <!-- footer -->
+    <footer class="text-center text-white mb-0 mt-5" style="background-color: #4f4f4f;color:wheat;width:100%;">
+        <h3 class="mt-1 p-2 mb-0">AROUND THE WEB</h3>
+        <!-- Grid container -->
+        <div class="d-flex pt-2 justify-content-center mt-0 m-lg-0">
+            <!-- Section: Social media -->
+            <section class="mb-2 m-lg-1 row w-100 p-0 justify-content-center">
+
+                <!-- Facebook -->
+                <button type="button"
+                    class="d-flex justify-content-center rounded-circle p-0 m-2 mt-0 mb-1 col col-sm-1 border-0"
+                    id="footButton">
+                    <a class="btn btn-link text-light m-0 rounded-circle"
+                        href="https://www.facebook.com/gorrepati.sameer" role="button" data-mdb-ripple-color="light"><i
+                            class="fa-brands fa-facebook m-sm-2" id="footImage"></i></a></button>
+
+                <!-- Twitter -->
+                <button type="button"
+                    class="d-flex justify-content-center rounded-circle p-0 m-2 mt-0 mb-1 col col-sm-1 border-0"
+                    id="footButton">
+                    <a class="btn btn-link text-light m-0 rounded-circle" href="https://twitter.com/sameerg1810"
+                        role="button" data-mdb-ripple-color="light"><i class="fa-brands fa-twitter  m-sm-2"
+                            id="footImage"></i></a></button>
+
+
+
+                <!-- Instagram -->
+                <button type="button"
+                    class="d-flex justify-content-center  rounded-circle p-0 m-2 mt-0  mb-1 col col-sm-1 border-0"
+                    id="footButton"> <a class="btn btn-link text-light m-0 rounded-circle"
+                        href="https://www.instagram.com/sameerindus/" role="button" data-mdb-ripple-color="light"><i
+                            class="fa-brands fa-instagram  m-sm-2" id="footImage"></i></a></button>
+
+
+                <!-- Linkedin -->
+                <button type="button"
+                    class="d-flex justify-content-center rounded-circle p-0 m-2 mt-0 mb-1 col col-sm-1 border-0"
+                    id="footButton"><a class="btn btn-link text-light m-0 rounded-circle"
+                        href="https://www.linkedin.com/in/sameer-gorrepati-546b591a3/" role="button"
+                        data-mdb-ripple-color="light"><i class="fa-brands fa-linkedin  m-sm-2" id="footImage"></i></a>
+                </button>
+
+                <!-- Github -->
+                <button type="button"
+                    class=" d-flex justify-content-center rounded-circle p-0 m-2 mt-0 mb-1 col col-sm-1 border-0"
+                    id="footButton"><a class="btn btn-link text-light m-0 rounded-circle"
+                        href="https://github.com/sameerg1810" role="button" data-mdb-ripple-color="light"><i
+                            class="fa-brands fa-github  m-sm-2" id="footImage"></i></a></button>
+
+            </section>
+            <!-- Section: Social media -->
+        </div>
+        <!-- Grid container -->
+
+        <!-- Copyright -->
+        <div class="text-center text-light p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            © Contact me on:
+            <a class="text-light" href="https://wa.me/9490856692?text=Hello%20there">Whatsapp <i
+                    class="fa-brands fa-whatsapp"></i></a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+
+    <script src="script.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/particles.min.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/app.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
